@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in(@user)
-      redirect_to user_path(@user.id)
+      redirect_to tasks_path
     else
       render :new
     end
@@ -28,5 +28,13 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find(params[:id])
     redirect_to current_user unless current_user?(@user)
+  end
+
+  def edit
+  end
+
+  def destroy
+    @task.destroy
+    redirect_to new_session_path, notice: t('.destroyed')
   end
 end
