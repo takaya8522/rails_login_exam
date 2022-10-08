@@ -36,3 +36,8 @@ ja:
       updated: タスクを更新しました
     destroy:
       destroyed: タスクを削除しました
+  users:
+    destroy:
+      destroyed: アカウントを削除しました
+    update:
+      updated: アカウントを更新しました
