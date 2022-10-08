@@ -2,8 +2,9 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
 
   def index
-    @user = current_user
-    @tasks = @user.tasks
+    user = current_user
+    binding.pry
+    @tasks = user.tasks
   end
 
   def new
