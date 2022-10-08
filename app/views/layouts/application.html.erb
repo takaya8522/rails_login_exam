@@ -14,13 +14,13 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <% if logged_in? %>
-      <li><%= link_to "タスク一覧", tasks_path %></li>
-      <li><%= link_to "タスクを登録する", new_task_path %></li>
-      <li><%= link_to "アカウント", user_path(current_user.id) %></li>
-      <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+      <li><%= link_to "タスク一覧", tasks_path, id: "sign-up"%></li>
+      <li><%= link_to "タスクを登録する", new_task_path, id: "sign-in"%></li>
+      <li><%= link_to "アカウント", user_path(current_user.id), id: "my-account"%></li>
+      <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete, id: "sign-out"%></li>
     <% else %>
-      <li><%= link_to "アカウント登録", new_user_path %></li>
-      <li><%= link_to "ログイン", new_session_path %></li>
+      <li><%= link_to "アカウント登録", new_user_path , id: "tasks-index"%></li>
+      <li><%= link_to "ログイン", new_session_path , id: "new-task"%></li>
     <% end %>
     <%= yield %>
   </body>

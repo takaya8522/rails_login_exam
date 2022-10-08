@@ -10,4 +10,4 @@
   <%= f.password_field :password_confirmation %><br><br>
   <%= f.submit "登録する" %>
 <% end %>
-<%= link_to t('common.back'), user_path(current_user.id) %>
+<%= link_to t('common.back'), user_path(current_user.id), id: "back"%>

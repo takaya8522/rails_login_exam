@@ -1,7 +1,7 @@
 <h1>アカウント登録ページ</h1>
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= @user.name %>さん！ エラーが<%= @user.errors.count %>件発生しました！</h2>
+    <h2>エラーが<%= @user.errors.count %>件発生しました！</h2>
     <ul>
     <% @user.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -19,5 +19,5 @@
   <%= f.password_field :password %>
   <%= f.label :パスワード（確認） %>
   <%= f.password_field :password_confirmation %><br><br>
-  <%= f.submit "登録する" %>
+  <%= f.submit "登録する"%>
 <% end %>

@@ -6,6 +6,10 @@ ja:
       task:
         title: タイトル
         content: 内容
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
   errors:
     format: "%{attribute}%{message}"
     messages:
@@ -37,6 +41,12 @@ ja:
     destroy:
       destroyed: タスクを削除しました
   users:
+    create:
+      created: アカウントを登録しました
+    login: ログインしました
+    logout: ログアウトしました
+    login_required: ログインしてください
+    login_error: メールアドレスまたはパスワードに誤りがあります
     destroy:
       destroyed: アカウントを削除しました
     update:
