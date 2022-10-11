@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in(user)
       redirect_to tasks_path , notice: t('users.login')
     else
-      flash[:danger] = 'ログインに失敗しました'
+      flash[:danger] = 'メールアドレスまたはパスワードに誤りがあります'
       render :new
     end
   end

@@ -15,6 +15,7 @@ ja:
     format: "%{attribute}%{message}"
     messages:
       blank: を入力してください
+      taken: はすでに使用されています
   helpers:
     submit:
       create: 登録する

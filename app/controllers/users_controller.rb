@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       log_in(@user)
       redirect_to tasks_path, notice: t('.created')
     else
-      render :new
+      render :new, notice: 'メールアドレスはすでに使用されています'
     end
   end
 
