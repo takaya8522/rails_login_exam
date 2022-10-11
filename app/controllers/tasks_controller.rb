@@ -3,7 +3,6 @@ class TasksController < ApplicationController
 
   def index
     user = current_user
-    binding.pry
     @tasks = user.tasks
   end
 
